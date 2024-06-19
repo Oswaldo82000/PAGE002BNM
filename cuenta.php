@@ -213,23 +213,64 @@ if (!isset($_SESSION['username'])) {
           <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#sidebarMenu" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body d-md-flex flex-column p-0 pt-lg-3 overflow-y-auto">
-          <ul class="nav flex-column">
-            <li class="nav-item">
-              <a class="nav-link d-flex align-items-center gap-2 active" aria-current="page" href="#">
-                <svg class="bi"><use xlink:href="#house-fill"/></svg>
-                Movimientos
-              </a>
-              <hr>
-
-              <p class="text-end p-3 fw-bolder text-decoration-underline" style="color:rgb(63,204,40);">+ $18999.00<p>
-            </li>
+          <ul class="list-unstyled ps-0">
+      <li class="mb-1">
+        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="flse">
+          <?php echo $_SESSION['username'];?>
+        </button>
+      </li>
+      <li class="mb-1">
+        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
+          Balance
+        </button>
+        <div class="collapse" id="dashboard-collapse" style="">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Overview</a></li>
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Weekly</a></li>
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Monthly</a></li>
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Annually</a></li>
           </ul>
-
-          <ul class="nav flex-column mb-auto">
-             <li class="nav-item">
-              
-            </li>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed">
+          Estado de cuenta
+        </button>
+         
+      </li>
+      <li class="mb-1">
+        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#orders-collapse" aria-expanded="false">
+          Movimientos <svg xmlns="http://www.w3.org/2000/svg" id="col"  iewBox="0 0 16 16">
+<style type="text/css">
+  .open_een{fill:#0B1719;}
+</style>
+<g>
+  <g>
+    <path class="open_een" d="M6.5,29.796c-0.261,0-0.521-0.069-0.757-0.208C5.277,29.316,5,28.832,5,28.294V7.5    C5,7.224,5.224,7,5.5,7S6,7.224,6,7.5v20.794c0,0.259,0.173,0.388,0.248,0.432c0.074,0.044,0.271,0.131,0.497,0.004l21.954-12.294    c0.231-0.129,0.256-0.348,0.256-0.436s-0.025-0.307-0.256-0.436L6.745,3.271C6.521,3.146,6.321,3.232,6.248,3.274    C6.173,3.318,6,3.447,6,3.706V4.5C6,4.776,5.776,5,5.5,5S5,4.776,5,4.5V3.706c0-0.538,0.277-1.022,0.742-1.294    C6.206,2.14,6.763,2.133,7.233,2.398l21.953,12.293c0.48,0.27,0.768,0.759,0.768,1.309s-0.287,1.039-0.768,1.309L7.233,29.603    C7.003,29.731,6.751,29.796,6.5,29.796z"/>
+  </g>
+  <g>
+    <path class="open_een" d="M6.5,29.796c-0.261,0-0.521-0.069-0.757-0.208C5.277,29.316,5,28.832,5,28.294V7.5    C5,7.224,5.224,7,5.5,7S6,7.224,6,7.5v20.794c0,0.259,0.173,0.388,0.248,0.432c0.074,0.044,0.271,0.131,0.497,0.004l21.954-12.294    c0.231-0.129,0.256-0.348,0.256-0.436s-0.025-0.307-0.256-0.436L6.745,3.271C6.521,3.146,6.321,3.232,6.248,3.274    C6.173,3.318,6,3.447,6,3.706V4.5C6,4.776,5.776,5,5.5,5S5,4.776,5,4.5V3.706c0-0.538,0.277-1.022,0.742-1.294    C6.206,2.14,6.763,2.133,7.233,2.398l21.953,12.293c0.48,0.27,0.768,0.759,0.768,1.309s-0.287,1.039-0.768,1.309L7.233,29.603    C7.003,29.731,6.751,29.796,6.5,29.796z"/>
+  </g>
+</g>
+</svg>
+        </button>
+        <div class="collapse" id="orders-collapse">
+          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">New</a></li>
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Processed</a></li>
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Shipped</a></li>
+            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Returned</a></li>
           </ul>
+        </div>
+      </li>
+      <li class="mb-1">
+        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"  >
+          Tranferir
+        </button>
+         
+      </li>
+       
+    </ul>
         </div>
       </div>
     </div>

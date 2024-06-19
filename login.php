@@ -34,7 +34,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit();
     } else {
         // Login fallido
-        echo "Nombre de usuario o contraseña incorrectos.";
+
+        //$_POST['intento'] = "fallido";  
+        //var_dump($_POST);
+        //header("Location: contacto.php", $_POST['respuesta']="fail");
+        //exit();
+ 
+        include("contacto.php");
+     
     }
 }
 

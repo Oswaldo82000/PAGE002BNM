@@ -95,13 +95,17 @@
 
                   <form action="login.php" method="post" class="u-clearfix u-form-spacing-15 u-inner-form" style="padding: 0px;">
                     <div class="u-form-group u-form-name">
-                      <label for="username" class="u-label">Nombre de Usuario:</label><br>
+                      <label for="username" class="u-label">Nombre de Usuario:</label><br><br>
                       <input type="text"  id="username" name="username" class="u-border-2 u-border-white u-input u-input-rectangle u-radius-10 u-white" required>
-                    </div>
+                    </div><br>
                     <div class="u-form-email u-form-group">
-                      <label for="password" class="u-label">Contraseña:</label><br>
-                      <input type="password" id="password" name="password" class="u-border-2 u-border-white u-input u-input-rectangle u-radius-10 u-white" required><br><br>
-                    </div>
+                      <label for="password" class="u-label">Contraseña:</label><br><br>
+                      <input type="password" id="password" name="password" class="u-border-2 u-border-white u-input u-input-rectangle u-radius-10 u-white" required>
+                      
+                      <?php
+                      if(empty($_POST))echo "<br><br><br>";else{echo "<p>Contraseña incorrecta!<p><br><br> ";}
+                      ?>
+
                     <div class="u-align-right u-form-group u-form-submit">
                       <input type="submit" class="u-active-palette-2-light-1 u-border-5 u-border-active-palette-2-light-1 u-border-hover-palette-2-light-1 u-border-palette-2-base u-btn u-btn-round u-btn-submit u-button-style u-hover-palette-2-light-1 u-palette-2-base u-radius-10 u-btn-1" value="Acceder">
                     </div>
