@@ -1,24 +1,20 @@
 <?php
 // Inicia la sesión
-session_start();
+//session_start();
 
 // Verifica si el usuario ha iniciado sesión
-if (!isset($_SESSION['username'])) {
+//if (!isset($_SESSION['username'])) {
     // Si no hay sesión activa, redirige al usuario al formulario de login
-    header("Location: contacto.html");
-    exit();
-}
+  //  header("Location: contacto.html");
+   // exit();}
 ?>
 <!doctype html>
 <html lang="en" data-bs-theme="auto">
   <head> 
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Hugo 0.122.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">  
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <title>BNM</title>
+    <title>Banco nacional de mexico</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
     <!-- Favicons -->
 <link rel="apple-touch-icon" href="/docs/5.3/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
@@ -216,14 +212,16 @@ if (!isset($_SESSION['username'])) {
           <ul class="list-unstyled ps-0">
       <li class="mb-1">
         <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="flse">
-          <?php echo $_SESSION['username'];?>
+          <?php //echo $_SESSION['username'];?>
         </button>
       </li>
       <li class="mb-1">
         <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
-          Balance
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bar-chart-line-fill" viewBox="0 0 16 16">
+  <path d="M11 2a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v12h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1v-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3h1V7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7h1z"/>
+</svg> <span class="ms-2">Balance</span>
         </button>
-        <div class="collapse" id="dashboard-collapse" style="">
+        <div class="collapse" id="dashboard-collapse">
           <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
             <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Overview</a></li>
             <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Weekly</a></li>
@@ -234,38 +232,30 @@ if (!isset($_SESSION['username'])) {
       </li>
       <li class="mb-1">
         <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed">
-          Estado de cuenta
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-earmark-bar-graph-fill" viewBox="0 0 16 16">
+  <path d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0M9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1m.5 10v-6a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5m-2.5.5a.5.5 0 0 1-.5-.5v-4a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5zm-3 0a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5z"/>
+</svg>  <span class="ms-2">Estado de cuenta</span>
         </button>
          
       </li>
       <li class="mb-1">
-        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#orders-collapse" aria-expanded="false">
-          Movimientos <svg xmlns="http://www.w3.org/2000/svg" id="col"  iewBox="0 0 16 16">
-<style type="text/css">
-  .open_een{fill:#0B1719;}
-</style>
-<g>
-  <g>
-    <path class="open_een" d="M6.5,29.796c-0.261,0-0.521-0.069-0.757-0.208C5.277,29.316,5,28.832,5,28.294V7.5    C5,7.224,5.224,7,5.5,7S6,7.224,6,7.5v20.794c0,0.259,0.173,0.388,0.248,0.432c0.074,0.044,0.271,0.131,0.497,0.004l21.954-12.294    c0.231-0.129,0.256-0.348,0.256-0.436s-0.025-0.307-0.256-0.436L6.745,3.271C6.521,3.146,6.321,3.232,6.248,3.274    C6.173,3.318,6,3.447,6,3.706V4.5C6,4.776,5.776,5,5.5,5S5,4.776,5,4.5V3.706c0-0.538,0.277-1.022,0.742-1.294    C6.206,2.14,6.763,2.133,7.233,2.398l21.953,12.293c0.48,0.27,0.768,0.759,0.768,1.309s-0.287,1.039-0.768,1.309L7.233,29.603    C7.003,29.731,6.751,29.796,6.5,29.796z"/>
-  </g>
-  <g>
-    <path class="open_een" d="M6.5,29.796c-0.261,0-0.521-0.069-0.757-0.208C5.277,29.316,5,28.832,5,28.294V7.5    C5,7.224,5.224,7,5.5,7S6,7.224,6,7.5v20.794c0,0.259,0.173,0.388,0.248,0.432c0.074,0.044,0.271,0.131,0.497,0.004l21.954-12.294    c0.231-0.129,0.256-0.348,0.256-0.436s-0.025-0.307-0.256-0.436L6.745,3.271C6.521,3.146,6.321,3.232,6.248,3.274    C6.173,3.318,6,3.447,6,3.706V4.5C6,4.776,5.776,5,5.5,5S5,4.776,5,4.5V3.706c0-0.538,0.277-1.022,0.742-1.294    C6.206,2.14,6.763,2.133,7.233,2.398l21.953,12.293c0.48,0.27,0.768,0.759,0.768,1.309s-0.287,1.039-0.768,1.309L7.233,29.603    C7.003,29.731,6.751,29.796,6.5,29.796z"/>
-  </g>
-</g>
-</svg>
+        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#orders-collapse" aria-expanded="true">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bell-fill" viewBox="0 0 16 16">
+  <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2m.995-14.901a1 1 0 1 0-1.99 0A5 5 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901"/>
+</svg> <span class="ms-2">Movimientos</span>
         </button>
-        <div class="collapse" id="orders-collapse">
-          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">New</a></li>
-            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Processed</a></li>
-            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Shipped</a></li>
-            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Returned</a></li>
+        <div class="collapse border-start" id="orders-collapse">
+          <ul class="btn-toggle-nav border-start text-end me-3 list-unstyled fw-normal pb-1 small">
+            <li><span class=" fw-semibold">+$8,144,316.00 MXN</span></li>
           </ul>
         </div>
       </li>
       <li class="mb-1">
         <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"  >
-          Tranferir
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-send-check-fill" viewBox="0 0 16 16">
+  <path d="M15.964.686a.5.5 0 0 0-.65-.65L.767 5.855H.766l-.452.18a.5.5 0 0 0-.082.887l.41.26.001.002 4.995 3.178 1.59 2.498C8 14 8 13 8 12.5a4.5 4.5 0 0 1 5.026-4.47zm-1.833 1.89L6.637 10.07l-.215-.338a.5.5 0 0 0-.154-.154l-.338-.215 7.494-7.494 1.178-.471z"/>
+  <path d="M16 12.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0m-1.993-1.679a.5.5 0 0 0-.686.172l-1.17 1.95-.547-.547a.5.5 0 0 0-.708.708l.774.773a.75.75 0 0 0 1.174-.144l1.335-2.226a.5.5 0 0 0-.172-.686"/>
+</svg>  <span class="ms-2">Trasnferir</span>
         </button>
          
       </li>
@@ -278,7 +268,7 @@ if (!isset($_SESSION['username'])) {
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
       
       <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-        <h1 class="h2"><?php echo "Bienvenido " . $_SESSION['username'];?> </h1> 
+        <h1 class="h2"><?php// echo "Bienvenido " . $_SESSION['username'];?> </h1> 
         <div class="btn-toolbar mb-2 mb-md-0">
           <div class="btn-group me-2"> 
           </div>
