@@ -168,8 +168,8 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <span>Para Consultar su estado de cuenta confirme su contraseña</span>
-        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="CONTRASEÑA">
+        <span>Para consultar su estado de cuenta confirme su contraseña</span>
+        <input type="password" class="form-control " id="exampleFormControlInput1" placeholder="CONTRASEÑA">
 
       </div>
       <div class="modal-footer">
@@ -209,7 +209,7 @@
         <h3><?php echo "Bienvenido "; // . $_SESSION['username'];?>  a su cuenta </h3>
         <div class="  mb-2 mb-md-0"></div>
       </div>
-      <table class="table table-border">
+      <table class="table table-border rounded">
   <thead>
     <legend>Movimientos</legend>
     <tr> 
@@ -242,25 +242,84 @@
     </tr>
   </tbody>
 </table>
-       
+       <div class="bg-white p-3 rounded-1 ">
+        <div class="h4 pb-2 mb-4 text-danger border-bottom border-danger">
+  Indicadores
+</div>
+
+        <div class="p-3 row">
+          <div class="col">
+            <div class="card text-bg-light mb-3" style="max-width: 18rem;">
+              <div class="card-body text-center">
+                  <p class="lh-1"> inflacion dubyacente</p>
+                  <p class="lh-1">11.00</p>
+                  <p class="lh-1">25-jun-2024</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card text-bg-light mb-3" style="max-width: 18rem;">
+              <div class="card-body text-center">
+                  <p class="lh-1"> inflacion dubyacente</p>
+                  <p class="lh-1">11.00</p>
+                  <p class="lh-1">25-jun-2024</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card text-bg-light mb-3" style="max-width: 18rem;">
+              <div class="card-body text-center">
+                  <p class="lh-1"> inflacion dubyacente</p>
+                  <p class="lh-1">11.00</p>
+                  <p class="lh-1">25-jun-2024</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow bg-body-tertiary rounded mb-3">
+              <div class="card-body text-center">
+                  <p class="lh-1"> inflacion dubyacente</p>
+                  <p class="lh-1">11.00</p>
+                  <p class="lh-1">25-jun-2024</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="h4 pb-2 mb-4 text-danger border-bottom border-danger">
+        
+</div>
+<span class="h4">Tipo de cambio</span>
+        </div>
+         <div class="row p-3"> 
+          <div class="shadow p-3 mb-5 bg-body-tertiary rounded">
+            <div class="row ">
+              <div class="col-sm-3">
+                <label class="form-label" for="cantidad">MONTO</label>
+                <input id="cantidad control-form" class="mb-3 form-control" type="TEXT" value="$1">
+              </div>
+              <div class="col-sm-4">
+                <label class="form-label" for="monedaorg">De</label>
+                <select class="form-select" aria-label="Default select example">
+  <option selected><img src ="mxn.svg"> MNX - PESOS MEXICANOS</option>
+  <option value="1">One</option>
+  <option value="2">Two</option>
+  <option value="3">Three</option>
+</select>
+              </div>
+              <div class="col-sm-4 ">
+                <label class="form-label" for="">A</label>
+                <input class="mb-3 form-control" type="TEXT" value="DOLAR EUA ">
+              </div>
+            </div>
+          </div>
+        </div>
+       </div>
     </main>
   </div>
 </div>
-
-<footer class=" p-5 u-align-center-sm u-align-center-xs u-clearfix u-custom-color-1 u-footer" id="sec-ef74"><div class="u-clearfix u-sheet u-valign-middle-sm u-valign-middle-xs u-sheet-1">
-        <a href="https://bnm.com.mx" class="u-image u-logo u-image-1" data-image-width="1280" data-image-height="386" title="logo" rel="nofollow">
-          <img src="images/banco-logo.png" class="u-logo-image u-logo-image-1">
-        </a>
-        <p>"Afore BNM S.A. de C.V., BNM S.A. Institución Financiera, Fundación BNM A.C. y BNM S.A. de C.V. son personas morales distintas e independientes entre sí, así como de cualquiera de sus negocios asociados o vinculados".</p>
-        <h5 class="u-text u-text-default u-text-1">Telefono: (888) 281-3192&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; contacto@bnm.com.mx&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;www.bnm.com.mx<br> Montecito 38, Nápoles, Benito Juárez, 03810 Ciudad de México, CDMX, México
-        </h5>
-        <p>Consulta costos y comisiones de nuestros productos más destacados: Solicita tu Tarjeta de Crédito BNM Tramita tu Tarjeta de Crédito BNM en línea Pide tu Crédito BNM Comienza tu vida crediticia
-
-Términos y Condiciones de Uso Aviso de Privacidad Mapa de sitio Repositorio Histórico </p>
-
-<P class="text-end fw-bolder">Copyrigth 2022 BNM S.A Institución Financiera - Todos los derechos reservados </P>
-<span class="text-end">Consulta los costos y las comisiones de nuestros productos</span>
-     </div></footer>
- 
+<?php
+  //Mostrar el contenido del archivo footer.html
+  $page = file_get_contents('footer.html'); 
+  echo $page;?>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
 </html>

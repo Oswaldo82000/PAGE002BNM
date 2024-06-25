@@ -179,7 +179,7 @@
     </div>
     <hr>
     <div class="text-center">
-    <img src = "succes.svg" height="50" alt="Mi SVG feliz"/>
+    <img src = "succes.svg" height="50" alt="Tranferencia Exitosa"/>
     Tranferencia Exitosa!
     </div>
     
