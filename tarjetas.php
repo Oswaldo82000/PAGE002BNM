@@ -36,6 +36,7 @@
               <svg class="u-svg-link" viewBox="0 0 24 24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu-hamburger"></use></svg>
               <svg class="u-svg-content" version="1.1" id="menu-hamburger" viewBox="0 0 16 16" x="0px" y="0px" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g><rect y="1" width="16" height="2"></rect><rect y="7" width="16" height="2"></rect><rect y="13" width="16" height="2"></rect>
 </g></svg>
+
             </a>
           </div>
           <div class="u-custom-menu u-nav-container">
@@ -52,6 +53,7 @@
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Cuentas-y-Prestamos.html" rel="nofollow">Cuentas y Prestamos</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="quienessomos.html">Quienes Somos</a>
 </li></ul>
+
               </div>
             </div>
             <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
@@ -74,19 +76,15 @@
             <span style="line-height: 2.0;">• Paga en miles de comercios en todo el mundo • Ofertas de estreno al contratar • Descuentos al usar<img src="images/tarjeta.jpg" align="center" style="width: 453px;" class="fr-dib fr-fic" width="570">
             </span>
           </p>
+          
         </div>
         <img class="u-expanded-width u-image u-image-default u-image-1" src="images/tarjetas.jpg" alt="" data-image-width="1322" data-image-height="476">
       </div>
     </section>
     
-    
-    
-     <footer class="u-align-center-sm u-align-center-xs u-clearfix u-custom-color-1 u-footer" id="sec-ef74"><div class="u-clearfix u-sheet u-valign-middle-sm u-valign-middle-xs u-sheet-1">
-        <a href="https://bnm.com.mx" class="u-image u-logo u-image-1" data-image-width="1280" data-image-height="386" title="logo" rel="nofollow">
-          <img src="images/banco-logo.png" class="u-logo-image u-logo-image-1">
-        </a>
-        <h5 class="u-text u-text-default u-text-1">Telefono: (888) 281-3192&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; contacto@bnm.com.mx&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;www.bnm.com.mx<br> Montecito 38, Nápoles, Benito Juárez, 03810 Ciudad de México, CDMX, México
-        </h5>
-      </div></footer>
-  
-</body></html>
+  </body>
+  <?php
+  //Mostrar el contenido del archivo footer.html
+  $page = file_get_contents('footer.html'); 
+  echo $page;?>
+</html>
