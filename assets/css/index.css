@@ -213,7 +213,7 @@
 .u-container-layout.hover .u-section-1-1 .u-image-1 {
   transform: rotate(0deg) scale(1) translateX(0px) translateY(0px) !important;
 } .u-section-2 {
-  background-image: url("images/cuenta.jpg");
+  background-image: url("../img/cuenta.jpg");
   background-position: 50% 50%;
 }
 

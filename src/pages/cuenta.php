@@ -1,12 +1,12 @@
 <?php
 // Inicia la sesión
-//session_start();
+session_start();
 
 // Verifica si el usuario ha iniciado sesión
-//if (!isset($_SESSION['username'])) {
-    // Si no hay sesión activa, redirige al usuario al formulario de login
-  //  header("Location: contacto.html");
-   // exit();}
+if (!isset($_SESSION['username'])) {
+  // Si no hay sesión activa, redirige al usuario al formulario de login
+   header("Location: contacto.html");
+    exit();}
 ?>
 <!doctype html>
 <html lang="en" data-bs-theme="auto">
@@ -17,11 +17,10 @@
     <title>Banco nacional de mexico</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
     <!-- Favicons -->
-    <link rel="icon" type="image/x-icon" href="images/favicon.png">
-    <link rel="stylesheet" href="nicepage.css" media="screen">
-    <link rel="stylesheet" href="index.css" media="screen">
-<link rel="apple-touch-icon" href="/docs/5.3/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
-<link rel="manifest" href="/docs/5.3/assets/img/favicons/manifest.json">
+    <link rel="icon" type="image/x-icon" href="../../assets/img/favicon.png">
+    <link rel="stylesheet" href="../../assets/css/nicepage.css" media="screen">
+    <link rel="stylesheet" href="../../assets/css/index.css" media="screen">
+<link rel="apple-touch-icon" href="/docs/5.3/assets/img/favicons/apple-touch-icon.png" sizes="180x180"> 
 <link rel="mask-icon" href="/docs/5.3/assets/img/favicons/safari-pinned-tab.svg" color="#712cf9">
 <meta name="theme-color" content="#712cf9">
 
@@ -105,10 +104,9 @@
       }
     </style>
     
+    <!-- Custom styles for this template --> 
     <!-- Custom styles for this template -->
-    <link href="custom1" rel="stylesheet">
-    <!-- Custom styles for this template -->
-    <link href="dashboard.css" rel="stylesheet">
+    <link href="../../assets/css/dashboard.css" rel="stylesheet">
   </head>
   <body>
     <!-- Biblioteca de iconos svg-->
@@ -318,8 +316,8 @@
   </div>
 </div>
 <?php
-  //Mostrar el contenido del archivo footer.html
-  $page = file_get_contents('footer.html'); 
-  echo $page;?>
+$indice = '../../';
+    //Mostrar el contenido del archivo footer.html
+    include_once '../components/footer.php';?>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
 </html>

@@ -5,11 +5,12 @@
     <meta name="keywords" content="Contactenos">
     <meta name="description" content="">
     <title>Contactenos</title>
-    <link rel="stylesheet" href="nicepage.css" media="screen">
-<link rel="stylesheet" href="contacto.css" media="screen">
-    <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
-    <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
+    <link rel="stylesheet" href="../../assets/css/nicepage.css" media="screen">
+    <link rel="stylesheet" href="../../assets/css/contacto.css" media="screen">
+    <script class="u-script" type="text/javascript" src="../../assets/js/jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="../../assets/js/nicepage.js" defer=""></script>
     <meta name="generator" content="Nicepage 4.13.4, nicepage.com">
+    <link rel="icon" type="image/x-icon" href="../../assets/img/favicon.png">
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
     <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
     
@@ -19,48 +20,20 @@
 		"@context": "http://schema.org",
 		"@type": "Organization",
 		"name": "",
-		"logo": "images/banco-logo.png"
+		"logo": "../../assets/img/banco-logo.png"
 }</script>
     <meta name="theme-color" content="#478ac9">
     <meta property="og:title" content="contacto">
     <meta property="og:type" content="website">
   </head>
-  <body class="u-body u-xl-mode"><header class="u-clearfix u-header u-header" id="sec-2555"><div class="u-clearfix u-sheet u-sheet-1">
-        <a href="index.html" data-page-id="18314931" class="u-image u-logo u-image-1" data-image-width="1280" data-image-height="386" title="index">
-          <img src="images/banco-logo.png" class="u-logo-image u-logo-image-1">
-        </a>
-        <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1">
-          <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px;">
-            <a class="u-button-style u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="#">
-              <svg class="u-svg-link" viewBox="0 0 24 24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu-hamburger"></use></svg>
-              <svg class="u-svg-content" version="1.1" id="menu-hamburger" viewBox="0 0 16 16" x="0px" y="0px" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g><rect y="1" width="16" height="2"></rect><rect y="7" width="16" height="2"></rect><rect y="13" width="16" height="2"></rect>
-</g></svg>
-            </a>
-          </div>
-          <div class="u-custom-menu u-nav-container">
-            <ul class="u-nav u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="tarjetas.html" rel="nofollow" style="padding: 10px 20px;">Tarjetas de Credito</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Cuentas-y-Prestamos.html" rel="nofollow" style="padding: 10px 20px;">Cuentas y Prestamos</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="quienessomos.html" style="padding: 10px 20px;">Quienes Somos</a>
-</li></ul>
-          </div>
-          <div class="u-custom-menu u-nav-container-collapse">
-            <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
-              <div class="u-inner-container-layout u-sidenav-overflow">
-                <div class="u-menu-close"></div>
-                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="tarjetas.html" rel="nofollow">Tarjetas de Credito</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Cuentas-y-Prestamos.html" rel="nofollow">Cuentas y Prestamos</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="quienessomos.html">Quienes Somos</a>
-</li></ul>
-              </div>
-            </div>
-            <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
-          </div>
-        </nav>
-        <a href="contacto.html" data-page-id="40420343" class="u-border-none u-btn u-btn-round u-button-style u-custom-color-1 u-hover-grey-40 u-radius-50 u-btn-1"><span class="u-file-icon u-icon u-text-white"><img src="images/149952.png" alt=""></span>&nbsp;ACCESO
-        </a>
-      </div></header>
+  <body class="u-body u-xl-mode">
+  <?php
+    //idice de ruta
+    $indice = '../../';
+    //añade el contenido del archivo header con funcionalidad php
+    include_once '../../src/components/header.php';?>
     <section class="u-clearfix u-grey-10 u-section-1" id="carousel_5c99">
-      <img class="u-expanded-width u-image u-image-1" src="images/mnmn-min.jpg" data-image-width="1920" data-image-height="730">
+      <img class="u-expanded-width u-image u-image-1" src="../../assets/img/mnmn-min.jpg" data-image-width="1920" data-image-height="730">
       <div class="u-clearfix u-gutter-16 u-layout-wrap u-layout-wrap-1">
         <div class="u-gutter-0 u-layout">
           <div class="u-layout-row">
@@ -72,14 +45,14 @@
                 <div class="u-expanded-width u-list u-list-1">
                   <div class="u-repeater u-repeater-1">
                     <div class="u-align-left u-container-style u-list-item u-repeater-item">
-                      <div class="u-container-layout u-similar-container u-container-layout-2"><span class="u-file-icon u-icon u-text-palette-4-base u-icon-1"><img src="images/3179068.png" alt=""></span>
+                      <div class="u-container-layout u-similar-container u-container-layout-2"><span class="u-file-icon u-icon u-text-palette-4-base u-icon-1"><img src="../../assets/img/3179068.png" alt=""></span>
                         <h6 class="u-text u-text-3">Domicilio</h6>
                         <p class="u-text u-text-4"> Montecito 38, Nápoles, Benito Juárez, <br>03810 Ciudad de México, CDMX, México
                         </p>
                       </div>
                     </div>
                     <div class="u-align-left u-container-style u-list-item u-repeater-item">
-                      <div class="u-container-layout u-similar-container u-container-layout-3"><span class="u-file-icon u-icon u-text-palette-4-base u-icon-2"><img src="images/ce131fa2-9b26-4c33-a9f7-aff3357242a7.png" alt=""></span>
+                      <div class="u-container-layout u-similar-container u-container-layout-3"><span class="u-file-icon u-icon u-text-palette-4-base u-icon-2"><img src="../../assets/img/ce131fa2-9b26-4c33-a9f7-aff3357242a7.png" alt=""></span>
                         <h6 class="u-text u-text-5">Telefono</h6>
                         <p class="u-text u-text-6">888-281-3192</p>
                       </div>
@@ -93,7 +66,7 @@
                 <h4 class="u-custom-font u-font-montserrat u-text u-text-7">Acceso Cuentahabiente</h4>
                 <div class="u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-form u-form-1">
 
-                  <form action="login.php" method="post" class="u-clearfix u-form-spacing-15 u-inner-form" style="padding: 0px;">
+                  <form action="../scripts/login.php" method="post" class="u-clearfix u-form-spacing-15 u-inner-form" style="padding: 0px;">
                     <div class="u-form-group u-form-name">
                       <label for="username" class="u-label">Nombre de Usuario:</label><br><br>
                       <input type="text"  id="username" name="username" class="u-border-2 u-border-white u-input u-input-rectangle u-radius-10 u-white" required>
@@ -118,15 +91,7 @@
       </div>
     </section>
     
-    
-    
-     <footer class="u-align-center-sm u-align-center-xs u-clearfix u-custom-color-1 u-footer" id="sec-ef74"><div class="u-clearfix u-sheet u-valign-middle-sm u-valign-middle-xs u-sheet-1">
-        <a href="https://bnm.com.mx" class="u-image u-logo u-image-1" data-image-width="1280" data-image-height="386" title="logo" rel="nofollow">
-          <img src="images/banco-logo.png" class="u-logo-image u-logo-image-1">
-        </a>
-        <h5 class="u-text u-text-default u-text-1">Telefono: (888) 281-3192&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; contacto@bnm.com.mx&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;www.bnm.com.mx<br> Montecito 38, Nápoles, Benito Juárez, 03810 Ciudad de México, CDMX, México
-        </h5>
-      </div></footer>
-   
-  
+    <?php
+    //Mostrar el contenido del archivo footer.html
+    include_once '../components/footer.php';?>
 </body></html>

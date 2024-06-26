@@ -30,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION['username'] = $username;
 
         // Redirigir a la página de bienvenida o a otra parte del sitio
-        header("Location: cuenta.php"); // Cambia 'bienvenida.php' por la página deseada
+        header("Location: ../pages/cuenta.php"); // Cambia 'bienvenida.php' por la página deseada
         exit();
     } else {
         // Login fallido
@@ -40,7 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         //header("Location: contacto.php", $_POST['respuesta']="fail");
         //exit();
  
-        include("contacto.php");
+        include("../pages/contacto.php");
      
     }
 }
