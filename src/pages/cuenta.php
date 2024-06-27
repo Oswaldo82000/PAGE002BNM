@@ -7,6 +7,7 @@ if (!isset($_SESSION['username'])) {
   // Si no hay sesión activa, redirige al usuario al formulario de login
    header("Location: contacto.html");
     exit();}
+    $fecha_actual = date('d-M-Y');
 ?>
 <!doctype html>
 <html lang="en" data-bs-theme="auto">
@@ -132,7 +133,7 @@ if (!isset($_SESSION['username'])) {
 <header class="navbar sticky-top bg-dark flex-md-nowrap p-0 shadow" data-bs-theme="dark">
   <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6 text-white">
     <svg class="bi"><use xlink:href='#usuario'/>
-    </svg><span class="ms-2">Antonio Velarde</span></a>
+    </svg><span class="ms-2"> CARL ERNEST K..</span></a>
 </header>
 <div class="container-fluid">
   <div class="row">
@@ -144,15 +145,23 @@ if (!isset($_SESSION['username'])) {
         <div class="offcanvas-body d-md-flex flex-column p-0 pt-lg-3 overflow-y-auto">
           <ul class="list-unstyled ps-0 ms-2">
             <li class="mb-1">
-              <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
+              <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed">
                 <svg class="bi"><use xlink:href='#balance'/></svg>
                 <span class="ms-2">Balance</span>
               </button>
+              <div class="border-start">
+                <ul class="btn-toggle-nav border-start text-end me-3 list-unstyled fw-normal pb-1 small">
+                  <li>
+                    <span class="mb-3 small fw-semibold text-success">+$2,590,254.01 MXN</span>
+                  </li>
+                  
+                </ul>
+              </div>
             </li>
             <li class="mb-1">
               <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 <svg class="bi"><use xlink:href='#EstadoCuenta'/></svg>
-                <span class="ms-2">Estado de cuenta</span>
+                <span class="ms-2" >Estado de cuenta</span>
               </button>
               <!-- Modal -->
 <div class="modal dialog" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -164,37 +173,80 @@ if (!isset($_SESSION['username'])) {
   <path d="M10.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0"/>
 </svg> <h1 class="ms-2 modal-title fs-5" id="exampleModalLabel">Estado de cuenta</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <form id="myForm"> 
       </div>
       <div class="modal-body">
-        <span>Para consultar su estado de cuenta confirme su contraseña</span>
-        <input type="password" class="form-control " id="exampleFormControlInput1" placeholder="CONTRASEÑA">
-
+        <label for="inputValue" class="mb-2">Para consultar su estado de cuenta confirme su contraseña</label>
+          <input  id="inputValue" name="inputValue" type="password" class="form-control " placeholder="CONTRASEÑA">
       </div>
       <div class="modal-footer">
+        <button type="submit" class="btn" data-bs-dismiss="modal">Continuar</button>
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button> 
       </div>
+      </form>
+      <script>
+    // Aquí va el código JavaScript
+
+    document.getElementById('myForm').addEventListener('submit', function(event) {
+  event.preventDefault(); // Evita que se envíe el formulario
+
+  var inputValue = document.getElementById('inputValue').value.trim(); // Obtener el valor del input y limpiar espacios al inicio y final
+  document.getElementById('inputValue').value = '';         // Vaciar el input después de la validación
+
+
+  // Comparar el valor del input y redirigir según el caso
+  if (inputValue === '12345') {
+    window.open('../files/BNM-KASTEN.pdf', '_blank')  // Redirigir a la página destino si el valor coincide
+  } else {
+    alert('La contraseña es incorrecta.'); // Mostrar un mensaje de alerta si el valor no coincide
+  }
+});
+  </script>
     </div>
   </div>
 </div>
             </li>
             <li class="mb-1">
-              <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 active" data-bs-toggle="collapse" data-bs-target="#orders-collapse" aria-expanded="true">
+              <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 " data-bs-toggle="collapse" data-bs-target="#orders-collapse" aria-expanded="false">
               <svg class="bi"><use xlink:href='#Movimientos'/></svg>
               <span class="ms-2">Movimientos</span>
               </button>
-              <div class="border-start" id="orders-collapse">
+              <div class="  border-start" id="orders-collapse">
                 <ul class="btn-toggle-nav border-start text-end me-3 list-unstyled fw-normal pb-1 small">
                   <li>
-                    <span class=" small fw-semibold">+$8,144,316.00 MXN</span>
+                    <span class="mb-3 small fw-semibold text-success">+$2,590,254.00 MXN</span>
+                  </li>
+                  <li>
+                    <span class="mb-3 small fw-semibold text-success">+$.01 MXN</span>
                   </li>
                 </ul>
               </div>
             </li>
             <li class="mb-1">
-              <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed">
+              <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed "data-bs-toggle="modal" data-bs-target="#envioModal">
                 <svg class="bi"><use xlink:href='#Send'/></svg>
                 <span class="ms-2">Transferir</span>
               </button>
+                <!-- Modal -->
+<div class="modal dialog" id="envioModal" tabindex="-1" aria-labelledby="envioModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+      <svg class="bi"><use xlink:href='#Send'/></svg>
+        <h1 class="ms-2 modal-title fs-5" id="envioModalLabel">Transferir</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="alert alert-warning" role="alert">
+        <h4 class="alert-heading">Cuenta no activa!</h4>Parece que aún necesitamos activar su cuenta. Por favor, póngase en contacto con nuestro equipo de atención al cliente para que podamos ayudarlo rápidamente.
+       
+         
+        </div>
+      </div>
+      <div class="modal-footer"> 
+      </div>
+    </div>
+  </div>
             </li>
           </ul>
         </div>
@@ -204,12 +256,18 @@ if (!isset($_SESSION['username'])) {
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
       <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
         <!-- barra de titulo en el main-->
-        <h3><?php echo "Bienvenido "; // . $_SESSION['username'];?>  a su cuenta </h3>
-        <div class="  mb-2 mb-md-0"></div>
+        <h3 class="text-light"> Bienvenido a su cuenta BNM. </h3>
+        <button type="button" class="btn btn-light"><a href="../scripts/logout.php" class="text-black-50S">  Cerrar sessión 
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0z"></path>
+  <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z"></path>
+</svg> </a>
+            
       </div>
-      <table class="table table-border rounded">
+      <div class="shadow p-3 mb-5 bg-white rounded">
+      <table class="table table-hover table-sm">
   <thead>
-    <legend>Movimientos</legend>
+    <legend class="h4 mb-3" >Movimientos</legend>
     <tr> 
       <th scope="col">Concepto</th>
       <th scope="col"># de cuenta</th>
@@ -218,28 +276,31 @@ if (!isset($_SESSION['username'])) {
       <th scope="col">Fecha de transacción</th>
     </tr>
   </thead>
-  <tbody class="table-group-divider">
+  <tbody>
     <tr> 
-      <td>TRANFERENCIA</td>
+      <td class="text-uppercase">depósito</td>
       <td>#######8321</td>
-      <td class="text-success">+$8,144,316.00 MXN</td>
+      <td class="text-success">+$2,590,254.00 MXN</td>
       <th class="text-warning fw-semibold">En proceso</th>
       <th class="fw-lighter text-center">19/02/2024</th>
     </tr>
     <tr> 
-      <td>DEPOSITO</td>
+      <td class="text-uppercase">Cuenta
+      </td>
       <td>#######5010</td>
-      <td>+$30.00 MXN</td>
-      <td class="text-success fw-semibold">Recivido</td>
-      
+      <td class="text-success">+$.01 MXN</td>
+      <td class="text-success fw-semibold">Completado</td>
       <th class="fw-lighter text-center">13/02/2024</th>
     </tr>
     <tr> 
-      <td colspan="4" class="text-center text-body-secondary fs-6">Aun no se registran mas movimientos</td>
-      <td></td>
+      <td colspan="5" class="text-center text-body-secondary fs-6">Aun no se registran mas movimientos</td>
+      
     </tr>
   </tbody>
 </table>
+
+      </div>
+      
        <div class="bg-white p-3 rounded-1 ">
         <div class="h4 pb-2 mb-4 text-danger border-bottom border-danger">
   Indicadores
@@ -247,77 +308,106 @@ if (!isset($_SESSION['username'])) {
 
         <div class="p-3 row">
           <div class="col">
-            <div class="card text-bg-light mb-3" style="max-width: 18rem;">
+            <div class="card shadow bg-body-tertiary rounded mb-3" style="max-width: 18rem;">
               <div class="card-body text-center">
-                  <p class="lh-1"> inflacion dubyacente</p>
-                  <p class="lh-1">11.00</p>
-                  <p class="lh-1">25-jun-2024</p>
+                  <p class="lh-1"> inflación subyacente</p>
+                  <p class="lh-1">4.17</p>
+                  <p class="lh-1"><?php echo $fecha_actual;?></p>
               </div>
             </div>
           </div>
           <div class="col">
-            <div class="card text-bg-light mb-3" style="max-width: 18rem;">
+            <div class="card shadow bg-body-tertiary rounded mb-3" style="max-width: 18rem;">
               <div class="card-body text-center">
-                  <p class="lh-1"> inflacion dubyacente</p>
-                  <p class="lh-1">11.00</p>
-                  <p class="lh-1">25-jun-2024</p>
+                <span>Tipo de <br>cambio FIX</span> 
+                  <p class="lh-1">18.2215</p>
+                  <p class="lh-1"><?php echo $fecha_actual;?></p>
               </div>
             </div>
           </div>
           <div class="col">
-            <div class="card text-bg-light mb-3" style="max-width: 18rem;">
+            <div class="card shadow bg-body-tertiary rounded mb-3" style="max-width: 18rem;">
               <div class="card-body text-center">
-                  <p class="lh-1"> inflacion dubyacente</p>
+                <span>Tasa <br>Objetivo</span> 
                   <p class="lh-1">11.00</p>
-                  <p class="lh-1">25-jun-2024</p>
+                  <p class="lh-1"><?php echo $fecha_actual;?></p>
               </div>
             </div>
           </div>
           <div class="col">
             <div class="card shadow bg-body-tertiary rounded mb-3">
               <div class="card-body text-center">
-                  <p class="lh-1"> inflacion dubyacente</p>
-                  <p class="lh-1">11.00</p>
-                  <p class="lh-1">25-jun-2024</p>
+                  <p class="lh-1"> inflación</p>
+                  <p class="lh-1">4.78</p>
+                  <p class="lh-1"><?php echo $fecha_actual;?></p>
               </div>
             </div>
           </div>
 
-          <div class="h4 pb-2 mb-4 text-danger border-bottom border-danger">
-        
-</div>
+          <div class="h4 pb-2 mb-4 text-danger border-bottom border-danger"></div>
+          <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.22/angular.min.js"></script>
+
 <span class="h4">Tipo de cambio</span>
         </div>
          <div class="row p-3"> 
           <div class="shadow p-3 mb-5 bg-body-tertiary rounded">
-            <div class="row ">
-              <div class="col-sm-3">
+            <div class="row " ng-app="">
+              <div class="col-sm-2">
                 <label class="form-label" for="cantidad">MONTO</label>
-                <input id="cantidad control-form" class="mb-3 form-control" type="TEXT" value="$1">
+                <input id="cantidad control-form" class="mb-3 form-control" type="number" ng-model="n1" placeholder="0" value="0">
               </div>
-              <div class="col-sm-4">
+              <div class="col-sm-3">
                 <label class="form-label" for="monedaorg">De</label>
-                <select class="form-select" aria-label="Default select example">
-  <option selected><img src ="mxn.svg"> MNX - PESOS MEXICANOS</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
+                <select class="form-select" aria-label="Default select example" disabled>
+                  <option selected><img src ="mxn.svg">CAD - Dolar Canadiense</option>
+                  </select>
               </div>
-              <div class="col-sm-4 ">
+              <div class="col-sm-3">
                 <label class="form-label" for="">A</label>
-                <input class="mb-3 form-control" type="TEXT" value="DOLAR EUA ">
+                <input class="mb-3 form-control" type="TEXT" value="MXN - PESOS MEXICANOS" readonly>
               </div>
+              <div class="col-sm-3 ">
+                <label class="form-label" for="">Conversión</label>
+                <input class="mb-3 form-control" type="TEXT" value="${{n1*13.46}}" readonly>
+              </div> 
             </div>
-          </div>
-        </div>
-       </div>
-    </main>
+            <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+  <symbol id="check-circle-fill" viewBox="0 0 16 16">
+    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+  </symbol>
+  <symbol id="info-fill" viewBox="0 0 16 16">
+    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
+  </symbol>
+  <symbol id="exclamation-triangle-fill" viewBox="0 0 16 16">
+    <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+  </symbol>
+</svg>
+
+<div class="alert alert-primary d-flex align-items-center" role="alert">
+  <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Info:"><use xlink:href="#info-fill"/></svg>
+  <div>
+ Los resutados de esta herramienta pueden no ser completamente exactos. Verifique los datos para garantizar una precision y experiencia óptima para usted.
   </div>
 </div>
+ 
+            
+
+ 
+
+ 
+          </div>
+        </div>
+       </div> 
+       <br>
+    </main>
+  </div>
+ 
+</div>
+
 <?php
 $indice = '../../';
     //Mostrar el contenido del archivo footer.html
-    include_once '../components/footer.php';?>
+  include_once '../components/footer.php';?>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
 </html>
