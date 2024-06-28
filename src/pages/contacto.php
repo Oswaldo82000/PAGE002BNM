@@ -54,7 +54,7 @@
                     <div class="u-align-left u-container-style u-list-item u-repeater-item">
                       <div class="u-container-layout u-similar-container u-container-layout-3"><span class="u-file-icon u-icon u-text-palette-4-base u-icon-2"><img src="../../assets/img/ce131fa2-9b26-4c33-a9f7-aff3357242a7.png" alt=""></span>
                         <h6 class="u-text u-text-5">Telefono</h6>
-                        <p class="u-text u-text-6">888-281-3192</p>
+                        <p class="u-text u-text-6">559-558-6222</p>
                       </div>
                     </div>
                   </div>
